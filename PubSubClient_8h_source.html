@@ -98,117 +98,125 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef PubSubClient_h</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define PubSubClient_h</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifdef ESP8266</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;pgmspace.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;MQTT.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classPubSubClient.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPubSubClient.html">PubSubClient</a> {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">typedef</span> std::function&lt;void(const MQTT::Publish&amp;)&gt; callback_t;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   IPAddress server_ip;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   String server_hostname;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   uint16_t server_port;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   callback_t _callback;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;   WiFiClient _client;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   uint16_t nextMsgId, keepalive;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   uint8_t _max_retries;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastOutActivity;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastInActivity;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <span class="keywordtype">bool</span> pingOutstanding;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;MQTT.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPubSubClient.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPubSubClient.html">PubSubClient</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef _GLIBCXX_FUNCTIONAL</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">typedef</span> std::function&lt;void(const MQTT::Publish&amp;)&gt; callback_t;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">typedef</span> void(*callback_t)(<span class="keyword">const</span> <a class="code" href="classMQTT_1_1Publish.html">MQTT::Publish</a>&amp;);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   IPAddress server_ip;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   String server_hostname;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   uint16_t server_port;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   callback_t _callback;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <span class="keywordtype">bool</span> _process_message(<a class="code" href="classMQTT_1_1Message.html">MQTT::Message</a>* msg, uint8_t wait_type = 0, uint16_t wait_pid = 0);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <span class="keywordtype">bool</span> wait_for(uint8_t wait_type, uint16_t wait_pid = 0);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keywordtype">bool</span> send_reliably(<a class="code" href="classMQTT_1_1Message.html">MQTT::Message</a>* msg);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <a class="code" href="classPubSubClient.html#a63abf28fee11df02d353b83cd08c255e">PubSubClient</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   Client *_client;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   uint16_t nextMsgId, keepalive;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   uint8_t _max_retries;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastOutActivity;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> lastInActivity;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <span class="keywordtype">bool</span> pingOutstanding;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="keywordtype">bool</span> _process_message(<a class="code" href="classMQTT_1_1Message.html">MQTT::Message</a>* msg, uint8_t wait_type = 0, uint16_t wait_pid = 0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keywordtype">bool</span> wait_for(uint8_t wait_type, uint16_t wait_pid = 0);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <a class="code" href="classPubSubClient.html#a63abf28fee11df02d353b83cd08c255e">PubSubClient</a>(IPAddress &amp;ip, uint16_t port = 1883);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <a class="code" href="classPubSubClient.html#a63abf28fee11df02d353b83cd08c255e">PubSubClient</a>(String hostname, uint16_t port = 1883);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">set_server</a>(IPAddress &amp;ip, uint16_t port = 1883);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">set_server</a>(String hostname, uint16_t port = 1883);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordtype">bool</span> send_reliably(<a class="code" href="classMQTT_1_1Message.html">MQTT::Message</a>* msg);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <a class="code" href="classPubSubClient.html#a733fb8522d8c2b95c3c1e0e50245b885">PubSubClient</a>(Client&amp; c);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab">   58</a></span>&#160;   callback_t <a class="code" href="classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab">callback</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _callback; }</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classPubSubClient.html#ad00a54e7e8486eb7427221ec04f631f4">   60</a></span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#ad00a54e7e8486eb7427221ec04f631f4">set_callback</a>(callback_t cb) { _callback = cb; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classPubSubClient.html#a5c8934e727da1829348beb20802f1279">   62</a></span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a5c8934e727da1829348beb20802f1279">unset_callback</a>(<span class="keywordtype">void</span>) { _callback = NULL; <span class="keywordflow">return</span> * <span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPubSubClient.html#a7ba5ec23b119a7656198e63d0aa1c6b8">   65</a></span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a7ba5ec23b119a7656198e63d0aa1c6b8">set_max_retries</a>(uint8_t mr) { _max_retries = mr; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <a class="code" href="classPubSubClient.html#a733fb8522d8c2b95c3c1e0e50245b885">PubSubClient</a>(Client&amp; c, IPAddress &amp;ip, uint16_t port = 1883);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <a class="code" href="classPubSubClient.html#a733fb8522d8c2b95c3c1e0e50245b885">PubSubClient</a>(Client&amp; c, String hostname, uint16_t port = 1883);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">set_server</a>(IPAddress &amp;ip, uint16_t port = 1883);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">set_server</a>(String hostname, uint16_t port = 1883);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">connect</a>(String <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">connect</a>(String <span class="keywordtype">id</span>, String willTopic, uint8_t willQos, <span class="keywordtype">bool</span> willRetain, String willMessage);</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab">   68</a></span>&#160;   callback_t <a class="code" href="classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab">callback</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _callback; }</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classPubSubClient.html#ad00a54e7e8486eb7427221ec04f631f4">   70</a></span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#ad00a54e7e8486eb7427221ec04f631f4">set_callback</a>(callback_t cb) { _callback = cb; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classPubSubClient.html#a5c8934e727da1829348beb20802f1279">   72</a></span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a5c8934e727da1829348beb20802f1279">unset_callback</a>(<span class="keywordtype">void</span>) { _callback = NULL; <span class="keywordflow">return</span> * <span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPubSubClient.html#a7ba5ec23b119a7656198e63d0aa1c6b8">   75</a></span>&#160;   <a class="code" href="classPubSubClient.html">PubSubClient</a>&amp; <a class="code" href="classPubSubClient.html#a7ba5ec23b119a7656198e63d0aa1c6b8">set_max_retries</a>(uint8_t mr) { _max_retries = mr; <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">connect</a>(String <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classPubSubClient.html#acb3d3c0bd6e5257a343c0049d25c20a9">disconnect</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">publish</a>(String topic, String payload);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">connect</a>(String <span class="keywordtype">id</span>, String willTopic, uint8_t willQos, <span class="keywordtype">bool</span> willRetain, String willMessage);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">publish</a>(String topic, <span class="keyword">const</span> uint8_t *payload, uint32_t plength, <span class="keywordtype">bool</span> retained = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#aee145ee46c1811c582a8b503592fbc7c">publish_P</a>(String topic, PGM_P payload, uint32_t plength, <span class="keywordtype">bool</span> retained = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#ae298afa250bf3393780f8e7a13774fcc">subscribe</a>(String topic, uint8_t qos = 0);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016">unsubscribe</a>(String topic);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="classPubSubClient.html#acb3d3c0bd6e5257a343c0049d25c20a9">disconnect</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">publish</a>(String topic, String payload);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">publish</a>(String topic, <span class="keyword">const</span> uint8_t *payload, uint32_t plength, <span class="keywordtype">bool</span> retained = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#aee145ee46c1811c582a8b503592fbc7c">publish_P</a>(String topic, PGM_P payload, uint32_t plength, <span class="keywordtype">bool</span> retained = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a08f4240c1f1fc10b9c6f5f063b13d240">loop</a>();</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a7f2097ea474209f9454dbdcb671fa2e9">connected</a>();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4">  140</a></span>&#160;   uint16_t <a class="code" href="classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4">next_packet_id</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;     nextMsgId++;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;     <span class="keywordflow">if</span> (nextMsgId == 0) nextMsgId = 1;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;     <span class="keywordflow">return</span> nextMsgId;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#ae298afa250bf3393780f8e7a13774fcc">subscribe</a>(String topic, uint8_t qos = 0);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016">unsubscribe</a>(String topic);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a08f4240c1f1fc10b9c6f5f063b13d240">loop</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a7f2097ea474209f9454dbdcb671fa2e9">connected</a>();</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">connect</a>(<a class="code" href="classMQTT_1_1Connect.html">MQTT::Connect</a> &amp;conn);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">publish</a>(<a class="code" href="classMQTT_1_1Publish.html">MQTT::Publish</a> &amp;pub);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#ae298afa250bf3393780f8e7a13774fcc">subscribe</a>(<a class="code" href="classMQTT_1_1Subscribe.html">MQTT::Subscribe</a> &amp;sub);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016">unsubscribe</a>(<a class="code" href="classMQTT_1_1Unsubscribe.html">MQTT::Unsubscribe</a> &amp;unsub);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4">  150</a></span>&#160;   uint16_t <a class="code" href="classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4">next_packet_id</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;     nextMsgId++;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;     <span class="keywordflow">if</span> (nextMsgId == 0) nextMsgId = 1;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;     <span class="keywordflow">return</span> nextMsgId;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;   }</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classPubSubClient_html"><div class="ttname"><a href="classPubSubClient.html">PubSubClient</a></div><div class="ttdoc">Main do-everything class that sketches will use. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:17</div></div>
-<div class="ttc" id="classPubSubClient_html_ad00a54e7e8486eb7427221ec04f631f4"><div class="ttname"><a href="classPubSubClient.html#ad00a54e7e8486eb7427221ec04f631f4">PubSubClient::set_callback</a></div><div class="ttdeci">PubSubClient &amp; set_callback(callback_t cb)</div><div class="ttdoc">Set the callback function. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:60</div></div>
-<div class="ttc" id="classPubSubClient_html_aee145ee46c1811c582a8b503592fbc7c"><div class="ttname"><a href="classPubSubClient.html#aee145ee46c1811c582a8b503592fbc7c">PubSubClient::publish_P</a></div><div class="ttdeci">bool publish_P(String topic, PGM_P payload, uint32_t plength, bool retained=false)</div><div class="ttdoc">Publish an arbitrary data payload stored in "program" memory. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:227</div></div>
-<div class="ttc" id="classPubSubClient_html_ae298afa250bf3393780f8e7a13774fcc"><div class="ttname"><a href="classPubSubClient.html#ae298afa250bf3393780f8e7a13774fcc">PubSubClient::subscribe</a></div><div class="ttdeci">bool subscribe(String topic, uint8_t qos=0)</div><div class="ttdoc">Subscribe to a topic. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:265</div></div>
-<div class="ttc" id="classPubSubClient_html_a788ba523224b6cce276f56db1d0cfe0b"><div class="ttname"><a href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">PubSubClient::publish</a></div><div class="ttdeci">bool publish(String topic, String payload)</div><div class="ttdoc">Publish a string payload. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:210</div></div>
-<div class="ttc" id="classMQTT_1_1Subscribe_html"><div class="ttname"><a href="classMQTT_1_1Subscribe.html">MQTT::Subscribe</a></div><div class="ttdoc">Subscribe to one or more topics. </div><div class="ttdef"><b>Definition:</b> MQTT.h:344</div></div>
-<div class="ttc" id="classPubSubClient_html_a583cc04b54e73996cb7d6e3c7afa3a44"><div class="ttname"><a href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">PubSubClient::set_server</a></div><div class="ttdeci">PubSubClient &amp; set_server(IPAddress &amp;ip, uint16_t port=1883)</div><div class="ttdoc">Set the server ip address. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:29</div></div>
-<div class="ttc" id="classPubSubClient_html_a5c8934e727da1829348beb20802f1279"><div class="ttname"><a href="classPubSubClient.html#a5c8934e727da1829348beb20802f1279">PubSubClient::unset_callback</a></div><div class="ttdeci">PubSubClient &amp; unset_callback(void)</div><div class="ttdoc">Unset the callback function. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:62</div></div>
-<div class="ttc" id="classPubSubClient_html_ae8e9074233412afd624b43edf5ab4dab"><div class="ttname"><a href="classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab">PubSubClient::callback</a></div><div class="ttdeci">callback_t callback(void) const </div><div class="ttdoc">Get the callback function. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:58</div></div>
-<div class="ttc" id="classMQTT_1_1Connect_html"><div class="ttname"><a href="classMQTT_1_1Connect.html">MQTT::Connect</a></div><div class="ttdoc">Message sent when connecting to a broker. </div><div class="ttdef"><b>Definition:</b> MQTT.h:139</div></div>
-<div class="ttc" id="classPubSubClient_html_a63abf28fee11df02d353b83cd08c255e"><div class="ttname"><a href="classPubSubClient.html#a63abf28fee11df02d353b83cd08c255e">PubSubClient::PubSubClient</a></div><div class="ttdeci">PubSubClient()</div><div class="ttdoc">Empty constructor - use set_server() later, before connect() </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:10</div></div>
-<div class="ttc" id="classMQTT_1_1Unsubscribe_html"><div class="ttname"><a href="classMQTT_1_1Unsubscribe.html">MQTT::Unsubscribe</a></div><div class="ttdoc">Unsubscribe from one or more topics. </div><div class="ttdef"><b>Definition:</b> MQTT.h:393</div></div>
-<div class="ttc" id="classPubSubClient_html_a7f2097ea474209f9454dbdcb671fa2e9"><div class="ttname"><a href="classPubSubClient.html#a7f2097ea474209f9454dbdcb671fa2e9">PubSubClient::connected</a></div><div class="ttdeci">bool connected()</div><div class="ttdoc">Are we connected? </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:311</div></div>
-<div class="ttc" id="classPubSubClient_html_af1d00a0bd6b8c7de78e667bcad3416b4"><div class="ttname"><a href="classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4">PubSubClient::next_packet_id</a></div><div class="ttdeci">uint16_t next_packet_id(void)</div><div class="ttdoc">Return the next packet id. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:140</div></div>
-<div class="ttc" id="classPubSubClient_html_a31c1732dd6384ab67124754581b96384"><div class="ttname"><a href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">PubSubClient::connect</a></div><div class="ttdeci">bool connect(String id)</div><div class="ttdoc">Connect to the server with a client id. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:138</div></div>
-<div class="ttc" id="classMQTT_1_1Publish_html"><div class="ttname"><a href="classMQTT_1_1Publish.html">MQTT::Publish</a></div><div class="ttdoc">Publish a payload to a topic. </div><div class="ttdef"><b>Definition:</b> MQTT.h:202</div></div>
-<div class="ttc" id="classPubSubClient_html_a08f4240c1f1fc10b9c6f5f063b13d240"><div class="ttname"><a href="classPubSubClient.html#a08f4240c1f1fc10b9c6f5f063b13d240">PubSubClient::loop</a></div><div class="ttdeci">bool loop()</div><div class="ttdoc">Wait for packets to come in, processing them. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:183</div></div>
-<div class="ttc" id="classPubSubClient_html_acb3d3c0bd6e5257a343c0049d25c20a9"><div class="ttname"><a href="classPubSubClient.html#acb3d3c0bd6e5257a343c0049d25c20a9">PubSubClient::disconnect</a></div><div class="ttdeci">void disconnect(void)</div><div class="ttdoc">Disconnect from the server. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:304</div></div>
-<div class="ttc" id="classPubSubClient_html_a99633eb1d6cd90111de075fd4ee92016"><div class="ttname"><a href="classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016">PubSubClient::unsubscribe</a></div><div class="ttdeci">bool unsubscribe(String topic)</div><div class="ttdoc">Unsubscribe from a topic. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:286</div></div>
-<div class="ttc" id="classPubSubClient_html_a7ba5ec23b119a7656198e63d0aa1c6b8"><div class="ttname"><a href="classPubSubClient.html#a7ba5ec23b119a7656198e63d0aa1c6b8">PubSubClient::set_max_retries</a></div><div class="ttdeci">PubSubClient &amp; set_max_retries(uint8_t mr)</div><div class="ttdoc">Set the maximum number of retries when waiting for response packets. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:65</div></div>
-<div class="ttc" id="classMQTT_1_1Message_html"><div class="ttname"><a href="classMQTT_1_1Message.html">MQTT::Message</a></div><div class="ttdoc">Abstract base class. </div><div class="ttdef"><b>Definition:</b> MQTT.h:51</div></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">connect</a>(<a class="code" href="classMQTT_1_1Connect.html">MQTT::Connect</a> &amp;conn);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">publish</a>(<a class="code" href="classMQTT_1_1Publish.html">MQTT::Publish</a> &amp;pub);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#ae298afa250bf3393780f8e7a13774fcc">subscribe</a>(<a class="code" href="classMQTT_1_1Subscribe.html">MQTT::Subscribe</a> &amp;sub);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016">unsubscribe</a>(<a class="code" href="classMQTT_1_1Unsubscribe.html">MQTT::Unsubscribe</a> &amp;unsub);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classPubSubClient_html"><div class="ttname"><a href="classPubSubClient.html">PubSubClient</a></div><div class="ttdoc">Main do-everything class that sketches will use. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:20</div></div>
+<div class="ttc" id="classPubSubClient_html_ad00a54e7e8486eb7427221ec04f631f4"><div class="ttname"><a href="classPubSubClient.html#ad00a54e7e8486eb7427221ec04f631f4">PubSubClient::set_callback</a></div><div class="ttdeci">PubSubClient &amp; set_callback(callback_t cb)</div><div class="ttdoc">Set the callback function. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:70</div></div>
+<div class="ttc" id="classPubSubClient_html_aee145ee46c1811c582a8b503592fbc7c"><div class="ttname"><a href="classPubSubClient.html#aee145ee46c1811c582a8b503592fbc7c">PubSubClient::publish_P</a></div><div class="ttdeci">bool publish_P(String topic, PGM_P payload, uint32_t plength, bool retained=false)</div><div class="ttdoc">Publish an arbitrary data payload stored in "program" memory. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:230</div></div>
+<div class="ttc" id="classPubSubClient_html_ae298afa250bf3393780f8e7a13774fcc"><div class="ttname"><a href="classPubSubClient.html#ae298afa250bf3393780f8e7a13774fcc">PubSubClient::subscribe</a></div><div class="ttdeci">bool subscribe(String topic, uint8_t qos=0)</div><div class="ttdoc">Subscribe to a topic. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:268</div></div>
+<div class="ttc" id="classPubSubClient_html_a788ba523224b6cce276f56db1d0cfe0b"><div class="ttname"><a href="classPubSubClient.html#a788ba523224b6cce276f56db1d0cfe0b">PubSubClient::publish</a></div><div class="ttdeci">bool publish(String topic, String payload)</div><div class="ttdoc">Publish a string payload. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:213</div></div>
+<div class="ttc" id="classMQTT_1_1Subscribe_html"><div class="ttname"><a href="classMQTT_1_1Subscribe.html">MQTT::Subscribe</a></div><div class="ttdoc">Subscribe to one or more topics. </div><div class="ttdef"><b>Definition:</b> MQTT.h:343</div></div>
+<div class="ttc" id="classPubSubClient_html_a583cc04b54e73996cb7d6e3c7afa3a44"><div class="ttname"><a href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">PubSubClient::set_server</a></div><div class="ttdeci">PubSubClient &amp; set_server(IPAddress &amp;ip, uint16_t port=1883)</div><div class="ttdoc">Set the server ip address. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:32</div></div>
+<div class="ttc" id="classPubSubClient_html_a5c8934e727da1829348beb20802f1279"><div class="ttname"><a href="classPubSubClient.html#a5c8934e727da1829348beb20802f1279">PubSubClient::unset_callback</a></div><div class="ttdeci">PubSubClient &amp; unset_callback(void)</div><div class="ttdoc">Unset the callback function. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:72</div></div>
+<div class="ttc" id="classPubSubClient_html_ae8e9074233412afd624b43edf5ab4dab"><div class="ttname"><a href="classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab">PubSubClient::callback</a></div><div class="ttdeci">callback_t callback(void) const </div><div class="ttdoc">Get the callback function. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:68</div></div>
+<div class="ttc" id="classMQTT_1_1Connect_html"><div class="ttname"><a href="classMQTT_1_1Connect.html">MQTT::Connect</a></div><div class="ttdoc">Message sent when connecting to a broker. </div><div class="ttdef"><b>Definition:</b> MQTT.h:138</div></div>
+<div class="ttc" id="classMQTT_1_1Unsubscribe_html"><div class="ttname"><a href="classMQTT_1_1Unsubscribe.html">MQTT::Unsubscribe</a></div><div class="ttdoc">Unsubscribe from one or more topics. </div><div class="ttdef"><b>Definition:</b> MQTT.h:392</div></div>
+<div class="ttc" id="classPubSubClient_html_a7f2097ea474209f9454dbdcb671fa2e9"><div class="ttname"><a href="classPubSubClient.html#a7f2097ea474209f9454dbdcb671fa2e9">PubSubClient::connected</a></div><div class="ttdeci">bool connected()</div><div class="ttdoc">Are we connected? </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:314</div></div>
+<div class="ttc" id="classPubSubClient_html_af1d00a0bd6b8c7de78e667bcad3416b4"><div class="ttname"><a href="classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4">PubSubClient::next_packet_id</a></div><div class="ttdeci">uint16_t next_packet_id(void)</div><div class="ttdoc">Return the next packet id. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:150</div></div>
+<div class="ttc" id="classPubSubClient_html_a31c1732dd6384ab67124754581b96384"><div class="ttname"><a href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384">PubSubClient::connect</a></div><div class="ttdeci">bool connect(String id)</div><div class="ttdoc">Connect to the server with a client id. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:141</div></div>
+<div class="ttc" id="classMQTT_1_1Publish_html"><div class="ttname"><a href="classMQTT_1_1Publish.html">MQTT::Publish</a></div><div class="ttdoc">Publish a payload to a topic. </div><div class="ttdef"><b>Definition:</b> MQTT.h:201</div></div>
+<div class="ttc" id="classPubSubClient_html_a08f4240c1f1fc10b9c6f5f063b13d240"><div class="ttname"><a href="classPubSubClient.html#a08f4240c1f1fc10b9c6f5f063b13d240">PubSubClient::loop</a></div><div class="ttdeci">bool loop()</div><div class="ttdoc">Wait for packets to come in, processing them. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:186</div></div>
+<div class="ttc" id="classPubSubClient_html_a733fb8522d8c2b95c3c1e0e50245b885"><div class="ttname"><a href="classPubSubClient.html#a733fb8522d8c2b95c3c1e0e50245b885">PubSubClient::PubSubClient</a></div><div class="ttdeci">PubSubClient(Client &amp;c)</div><div class="ttdoc">Simple constructor. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:10</div></div>
+<div class="ttc" id="classPubSubClient_html_acb3d3c0bd6e5257a343c0049d25c20a9"><div class="ttname"><a href="classPubSubClient.html#acb3d3c0bd6e5257a343c0049d25c20a9">PubSubClient::disconnect</a></div><div class="ttdeci">void disconnect(void)</div><div class="ttdoc">Disconnect from the server. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:307</div></div>
+<div class="ttc" id="classPubSubClient_html_a99633eb1d6cd90111de075fd4ee92016"><div class="ttname"><a href="classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016">PubSubClient::unsubscribe</a></div><div class="ttdeci">bool unsubscribe(String topic)</div><div class="ttdoc">Unsubscribe from a topic. </div><div class="ttdef"><b>Definition:</b> PubSubClient.cpp:289</div></div>
+<div class="ttc" id="classPubSubClient_html_a7ba5ec23b119a7656198e63d0aa1c6b8"><div class="ttname"><a href="classPubSubClient.html#a7ba5ec23b119a7656198e63d0aa1c6b8">PubSubClient::set_max_retries</a></div><div class="ttdeci">PubSubClient &amp; set_max_retries(uint8_t mr)</div><div class="ttdoc">Set the maximum number of retries when waiting for response packets. </div><div class="ttdef"><b>Definition:</b> PubSubClient.h:75</div></div>
+<div class="ttc" id="classMQTT_1_1Message_html"><div class="ttname"><a href="classMQTT_1_1Message.html">MQTT::Message</a></div><div class="ttdoc">Abstract base class. </div><div class="ttdef"><b>Definition:</b> MQTT.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 22 2015 23:42:55 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2015 06:36:08 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -100,24 +100,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae1c159376eceb29c70fea94f5b2d6900"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1c159376eceb29c70fea94f5b2d6900"></a>
-typedef std::function&lt; void(const <a class="el" href="classMQTT_1_1Publish.html">MQTT::Publish</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>callback_t</b></td></tr>
-<tr class="separator:ae1c159376eceb29c70fea94f5b2d6900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6147c426dc2bf14bcfa71e7416da9d0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6147c426dc2bf14bcfa71e7416da9d0f"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>callback_t</b>) (const <a class="el" href="classMQTT_1_1Publish.html">MQTT::Publish</a> &amp;)</td></tr>
+<tr class="separator:a6147c426dc2bf14bcfa71e7416da9d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63abf28fee11df02d353b83cd08c255e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63abf28fee11df02d353b83cd08c255e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#a63abf28fee11df02d353b83cd08c255e">PubSubClient</a> ()</td></tr>
-<tr class="memdesc:a63abf28fee11df02d353b83cd08c255e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor - use <a class="el" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44" title="Set the server ip address. ">set_server()</a> later, before <a class="el" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384" title="Connect to the server with a client id. ">connect()</a> <br /></td></tr>
-<tr class="separator:a63abf28fee11df02d353b83cd08c255e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f46e58da5a4564127dfca87d54afff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f46e58da5a4564127dfca87d54afff5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#a5f46e58da5a4564127dfca87d54afff5">PubSubClient</a> (IPAddress &amp;ip, uint16_t port=1883)</td></tr>
-<tr class="memdesc:a5f46e58da5a4564127dfca87d54afff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the server ip address. <br /></td></tr>
-<tr class="separator:a5f46e58da5a4564127dfca87d54afff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac67cc7e29b081cbff31b62da65d23fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac67cc7e29b081cbff31b62da65d23fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#aac67cc7e29b081cbff31b62da65d23fb">PubSubClient</a> (String hostname, uint16_t port=1883)</td></tr>
-<tr class="memdesc:aac67cc7e29b081cbff31b62da65d23fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructors with the host name. <br /></td></tr>
-<tr class="separator:aac67cc7e29b081cbff31b62da65d23fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733fb8522d8c2b95c3c1e0e50245b885"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#a733fb8522d8c2b95c3c1e0e50245b885">PubSubClient</a> (Client &amp;c)</td></tr>
+<tr class="memdesc:a733fb8522d8c2b95c3c1e0e50245b885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple constructor.  <a href="#a733fb8522d8c2b95c3c1e0e50245b885">More...</a><br /></td></tr>
+<tr class="separator:a733fb8522d8c2b95c3c1e0e50245b885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9522f103e236841e0c675b107a87b518"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9522f103e236841e0c675b107a87b518"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#a9522f103e236841e0c675b107a87b518">PubSubClient</a> (Client &amp;c, IPAddress &amp;ip, uint16_t port=1883)</td></tr>
+<tr class="memdesc:a9522f103e236841e0c675b107a87b518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the server ip address. <br /></td></tr>
+<tr class="separator:a9522f103e236841e0c675b107a87b518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4d491d32a1cf08627e7ef48d95e414"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad4d491d32a1cf08627e7ef48d95e414"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#aad4d491d32a1cf08627e7ef48d95e414">PubSubClient</a> (Client &amp;c, String hostname, uint16_t port=1883)</td></tr>
+<tr class="memdesc:aad4d491d32a1cf08627e7ef48d95e414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructors with the host name. <br /></td></tr>
+<tr class="separator:aad4d491d32a1cf08627e7ef48d95e414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a583cc04b54e73996cb7d6e3c7afa3a44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a583cc04b54e73996cb7d6e3c7afa3a44"></a>
 <a class="el" href="classPubSubClient.html">PubSubClient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44">set_server</a> (IPAddress &amp;ip, uint16_t port=1883)</td></tr>
 <tr class="memdesc:a583cc04b54e73996cb7d6e3c7afa3a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the server ip address. <br /></td></tr>
@@ -197,7 +196,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main do-everything class that sketches will use. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a733fb8522d8c2b95c3c1e0e50245b885"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PubSubClient::PubSubClient </td>
+          <td>(</td>
+          <td class="paramtype">Client &amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simple constructor. </p>
+<p>Use <a class="el" href="classPubSubClient.html#a583cc04b54e73996cb7d6e3c7afa3a44" title="Set the server ip address. ">set_server()</a> before <a class="el" href="classPubSubClient.html#a31c1732dd6384ab67124754581b96384" title="Connect to the server with a client id. ">connect()</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a31c1732dd6384ab67124754581b96384"></a>
 <div class="memitem">
 <div class="memproto">
@@ -498,7 +517,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 22 2015 23:42:55 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2015 06:36:08 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

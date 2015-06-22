@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['message',['Message',['../classMQTT_1_1Message.html',1,'MQTT']]],
-  ['message',['Message',['../classMQTT_1_1Message.html#a9858fc94f0acfd013e1aa913bc910a4f',1,'MQTT::Message::Message(uint8_t t, uint8_t f=0)'],['../classMQTT_1_1Message.html#ae75e91efef8bd4546124d039076a5377',1,'MQTT::Message::Message(uint8_t t, uint16_t pid)']]],
-  ['mqtt',['MQTT',['../namespaceMQTT.html',1,'']]]
+  ['next_5fpacket_5fid',['next_packet_id',['../classPubSubClient.html#af1d00a0bd6b8c7de78e667bcad3416b4',1,'PubSubClient']]],
+  ['num_5frcs',['num_rcs',['../classMQTT_1_1SubscribeAck.html#a6ee4db473d61b173a77a3e33800f07c3',1,'MQTT::SubscribeAck']]]
 ];

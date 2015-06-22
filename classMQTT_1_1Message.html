@@ -114,10 +114,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14eb7500e2dba2fd8e50b3cc446a67db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14eb7500e2dba2fd8e50b3cc446a67db"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a14eb7500e2dba2fd8e50b3cc446a67db">send</a> (WiFiClient &amp;wclient)</td></tr>
-<tr class="memdesc:a14eb7500e2dba2fd8e50b3cc446a67db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the message out. <br /></td></tr>
-<tr class="separator:a14eb7500e2dba2fd8e50b3cc446a67db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbdfb497899e6d94433e7adfa08876f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cbdfb497899e6d94433e7adfa08876f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a5cbdfb497899e6d94433e7adfa08876f">send</a> (Client &amp;client)</td></tr>
+<tr class="memdesc:a5cbdfb497899e6d94433e7adfa08876f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the message out. <br /></td></tr>
+<tr class="separator:a5cbdfb497899e6d94433e7adfa08876f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fc22d8c243b42f62e28f206674e8bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fc22d8c243b42f62e28f206674e8bc"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a04fc22d8c243b42f62e28f206674e8bc">type</a> (void) const </td></tr>
 <tr class="memdesc:a04fc22d8c243b42f62e28f206674e8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the message type. <br /></td></tr>
@@ -129,9 +129,8 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9858fc94f0acfd013e1aa913bc910a4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9858fc94f0acfd013e1aa913bc910a4f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a9858fc94f0acfd013e1aa913bc910a4f">Message</a> (uint8_t t, uint8_t f=0)</td></tr>
-<tr class="memdesc:a9858fc94f0acfd013e1aa913bc910a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and flags. <br /></td></tr>
+<tr class="memitem:a9858fc94f0acfd013e1aa913bc910a4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a9858fc94f0acfd013e1aa913bc910a4f">Message</a> (uint8_t t, uint8_t f=0)</td></tr>
+<tr class="memdesc:a9858fc94f0acfd013e1aa913bc910a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not all message types use a packet id, but most do.  <a href="#a9858fc94f0acfd013e1aa913bc910a4f">More...</a><br /></td></tr>
 <tr class="separator:a9858fc94f0acfd013e1aa913bc910a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75e91efef8bd4546124d039076a5377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae75e91efef8bd4546124d039076a5377"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ae75e91efef8bd4546124d039076a5377">Message</a> (uint8_t t, uint16_t pid)</td></tr>
@@ -180,17 +179,51 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_flags</b></td></t
 <tr class="memitem:a59a9df12d0e24c37e14c8dbbbdd37caa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59a9df12d0e24c37e14c8dbbbdd37caa"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_packet_id</b></td></tr>
 <tr class="separator:a59a9df12d0e24c37e14c8dbbbdd37caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a909c3ea722142a221b5892db44da7d27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a909c3ea722142a221b5892db44da7d27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a909c3ea722142a221b5892db44da7d27">_deferred_payload</a></td></tr>
-<tr class="memdesc:a909c3ea722142a221b5892db44da7d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not all message types use a packet id, but most do. <br /></td></tr>
-<tr class="separator:a909c3ea722142a221b5892db44da7d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6835e4cfcfee666169fb444e238c62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6835e4cfcfee666169fb444e238c62"></a>
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>PubSubClient</b></td></tr>
 <tr class="separator:a4e6835e4cfcfee666169fb444e238c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9858fc94f0acfd013e1aa913bc910a4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MQTT::Message::Message </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>f</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Not all message types use a packet id, but most do. </p>
+<p>Private constructor from type and flags </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a66e97a9e8e064f701f9a37061c659422"></a>
 <div class="memitem">
 <div class="memproto">
@@ -409,7 +442,7 @@ friend&#160;</td><td class="memItemRight" valign="bottom"><b>PubSubClient</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 22 2015 23:42:56 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2015 06:36:08 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
