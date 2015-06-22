@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>MQTT</b></li><li class="navelem"><a class="el" href="classMQTT_1_1Message.html">Message</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMQTT.html">MQTT</a></li><li class="navelem"><a class="el" href="classMQTT_1_1Message.html">Message</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,6 +97,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MQTT::Message Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class.  
+ <a href="classMQTT_1_1Message.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="MQTT_8h_source.html">MQTT.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for MQTT::Message:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -103,52 +109,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMQTT_1_1Message__inherit__graph.png" border="0" usemap="#MQTT_1_1Message_inherit__map" alt="Inheritance graph"/></div>
 <map name="MQTT_1_1Message_inherit__map" id="MQTT_1_1Message_inherit__map">
-<area shape="rect" id="node2" href="classMQTT_1_1Connect.html" title="MQTT::Connect" alt="" coords="197,5,313,32"/><area shape="rect" id="node3" href="classMQTT_1_1ConnectAck.html" title="MQTT::ConnectAck" alt="" coords="185,56,324,83"/><area shape="rect" id="node4" href="classMQTT_1_1Disconnect.html" title="MQTT::Disconnect" alt="" coords="188,107,321,133"/><area shape="rect" id="node5" href="classMQTT_1_1Ping.html" title="MQTT::Ping" alt="" coords="208,157,301,184"/><area shape="rect" id="node6" href="classMQTT_1_1PingResp.html" title="MQTT::PingResp" alt="" coords="193,208,317,235"/><area shape="rect" id="node7" href="classMQTT_1_1Publish.html" title="MQTT::Publish" alt="" coords="199,259,310,285"/><area shape="rect" id="node8" href="classMQTT_1_1PublishAck.html" title="MQTT::PublishAck" alt="" coords="188,309,321,336"/><area shape="rect" id="node9" href="classMQTT_1_1PublishComp.html" title="MQTT::PublishComp" alt="" coords="182,360,327,387"/><area shape="rect" id="node10" href="classMQTT_1_1PublishRec.html" title="MQTT::PublishRec" alt="" coords="187,411,322,437"/><area shape="rect" id="node11" href="classMQTT_1_1PublishRel.html" title="MQTT::PublishRel" alt="" coords="189,461,320,488"/><area shape="rect" id="node12" href="classMQTT_1_1Subscribe.html" title="MQTT::Subscribe" alt="" coords="192,512,317,539"/><area shape="rect" id="node13" href="classMQTT_1_1SubscribeAck.html" title="MQTT::SubscribeAck" alt="" coords="181,563,329,589"/><area shape="rect" id="node14" href="classMQTT_1_1Unsubscribe.html" title="MQTT::Unsubscribe" alt="" coords="185,613,325,640"/><area shape="rect" id="node15" href="classMQTT_1_1UnsubscribeAck.html" title="MQTT::UnsubscribeAck" alt="" coords="173,664,336,691"/></map>
+<area shape="rect" id="node2" href="classMQTT_1_1Connect.html" title="Message sent when connecting to a broker. " alt="" coords="197,5,313,32"/><area shape="rect" id="node3" href="classMQTT_1_1ConnectAck.html" title="Response to Connect. " alt="" coords="185,56,324,83"/><area shape="rect" id="node4" href="classMQTT_1_1Disconnect.html" title="Disconnect from the broker. " alt="" coords="188,107,321,133"/><area shape="rect" id="node5" href="classMQTT_1_1Ping.html" title="Ping the broker. " alt="" coords="208,157,301,184"/><area shape="rect" id="node6" href="classMQTT_1_1PingResp.html" title="Response to Ping. " alt="" coords="193,208,317,235"/><area shape="rect" id="node7" href="classMQTT_1_1Publish.html" title="Publish a payload to a topic. " alt="" coords="199,259,310,285"/><area shape="rect" id="node8" href="classMQTT_1_1PublishAck.html" title="Response to Publish when qos == 1. " alt="" coords="188,309,321,336"/><area shape="rect" id="node9" href="classMQTT_1_1PublishComp.html" title="Response to PublishRel. " alt="" coords="182,360,327,387"/><area shape="rect" id="node10" href="classMQTT_1_1PublishRec.html" title="First response to Publish when qos == 2. " alt="" coords="187,411,322,437"/><area shape="rect" id="node11" href="classMQTT_1_1PublishRel.html" title="Response to PublishRec. " alt="" coords="189,461,320,488"/><area shape="rect" id="node12" href="classMQTT_1_1Subscribe.html" title="Subscribe to one or more topics. " alt="" coords="192,512,317,539"/><area shape="rect" id="node13" href="classMQTT_1_1SubscribeAck.html" title="Response to Subscribe. " alt="" coords="181,563,329,589"/><area shape="rect" id="node14" href="classMQTT_1_1Unsubscribe.html" title="Unsubscribe from one or more topics. " alt="" coords="185,613,325,640"/><area shape="rect" id="node15" href="classMQTT_1_1UnsubscribeAck.html" title="Response to Unsubscribe. " alt="" coords="173,664,336,691"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14eb7500e2dba2fd8e50b3cc446a67db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14eb7500e2dba2fd8e50b3cc446a67db"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (WiFiClient &amp;wclient)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a14eb7500e2dba2fd8e50b3cc446a67db">send</a> (WiFiClient &amp;wclient)</td></tr>
+<tr class="memdesc:a14eb7500e2dba2fd8e50b3cc446a67db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the message out. <br /></td></tr>
 <tr class="separator:a14eb7500e2dba2fd8e50b3cc446a67db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fc22d8c243b42f62e28f206674e8bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fc22d8c243b42f62e28f206674e8bc"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> (void) const </td></tr>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a04fc22d8c243b42f62e28f206674e8bc">type</a> (void) const </td></tr>
+<tr class="memdesc:a04fc22d8c243b42f62e28f206674e8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the message type. <br /></td></tr>
 <tr class="separator:a04fc22d8c243b42f62e28f206674e8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cfae4e8890e7ea505c652d7d3887de7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cfae4e8890e7ea505c652d7d3887de7"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>packet_id</b> (void) const </td></tr>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a2cfae4e8890e7ea505c652d7d3887de7">packet_id</a> (void) const </td></tr>
+<tr class="memdesc:a2cfae4e8890e7ea505c652d7d3887de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the packet id. <br /></td></tr>
 <tr class="separator:a2cfae4e8890e7ea505c652d7d3887de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9858fc94f0acfd013e1aa913bc910a4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9858fc94f0acfd013e1aa913bc910a4f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> (uint8_t t, uint8_t f=0)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a9858fc94f0acfd013e1aa913bc910a4f">Message</a> (uint8_t t, uint8_t f=0)</td></tr>
+<tr class="memdesc:a9858fc94f0acfd013e1aa913bc910a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and flags. <br /></td></tr>
 <tr class="separator:a9858fc94f0acfd013e1aa913bc910a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75e91efef8bd4546124d039076a5377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae75e91efef8bd4546124d039076a5377"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> (uint8_t t, uint16_t pid)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ae75e91efef8bd4546124d039076a5377">Message</a> (uint8_t t, uint16_t pid)</td></tr>
+<tr class="memdesc:ae75e91efef8bd4546124d039076a5377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and packet id. <br /></td></tr>
 <tr class="separator:ae75e91efef8bd4546124d039076a5377"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e97a9e8e064f701f9a37061c659422"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66e97a9e8e064f701f9a37061c659422"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_header_length</b> (uint32_t rlength) const </td></tr>
+<tr class="memitem:ae66138eb7e09ec5dfd2ee47261b32f61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae66138eb7e09ec5dfd2ee47261b32f61"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ae66138eb7e09ec5dfd2ee47261b32f61">~Message</a> ()</td></tr>
+<tr class="memdesc:ae66138eb7e09ec5dfd2ee47261b32f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:ae66138eb7e09ec5dfd2ee47261b32f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e97a9e8e064f701f9a37061c659422"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a66e97a9e8e064f701f9a37061c659422">fixed_header_length</a> (uint32_t rlength) const </td></tr>
+<tr class="memdesc:a66e97a9e8e064f701f9a37061c659422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the fixed header.  <a href="#a66e97a9e8e064f701f9a37061c659422">More...</a><br /></td></tr>
 <tr class="separator:a66e97a9e8e064f701f9a37061c659422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a342d47d33f175ccbb2cb9a71e3c563f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a342d47d33f175ccbb2cb9a71e3c563f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_fixed_header</b> (uint8_t *buf, uint32_t &amp;bufpos, uint32_t rlength) const </td></tr>
+<tr class="memitem:a342d47d33f175ccbb2cb9a71e3c563f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a342d47d33f175ccbb2cb9a71e3c563f3">write_fixed_header</a> (uint8_t *buf, uint32_t &amp;bufpos, uint32_t rlength) const </td></tr>
+<tr class="memdesc:a342d47d33f175ccbb2cb9a71e3c563f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the fixed header to a buffer.  <a href="#a342d47d33f175ccbb2cb9a71e3c563f3">More...</a><br /></td></tr>
 <tr class="separator:a342d47d33f175ccbb2cb9a71e3c563f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e56ed1137be3a186a0ab80a08f7b5d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e56ed1137be3a186a0ab80a08f7b5d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_packet_id</b> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memitem:a5e56ed1137be3a186a0ab80a08f7b5d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a5e56ed1137be3a186a0ab80a08f7b5d5">write_packet_id</a> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memdesc:a5e56ed1137be3a186a0ab80a08f7b5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the packet id to a buffer.  <a href="#a5e56ed1137be3a186a0ab80a08f7b5d5">More...</a><br /></td></tr>
 <tr class="separator:a5e56ed1137be3a186a0ab80a08f7b5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b69bdde0f504aab98aabc18c7a03a88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b69bdde0f504aab98aabc18c7a03a88"></a>
-virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>variable_header_length</b> (void) const </td></tr>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a7b69bdde0f504aab98aabc18c7a03a88">variable_header_length</a> (void) const </td></tr>
+<tr class="memdesc:a7b69bdde0f504aab98aabc18c7a03a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of variable header. <br /></td></tr>
 <tr class="separator:a7b69bdde0f504aab98aabc18c7a03a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b48706570f2e1953a2a2020a74bc692"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b48706570f2e1953a2a2020a74bc692"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write_variable_header</b> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memitem:a5b48706570f2e1953a2a2020a74bc692"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a5b48706570f2e1953a2a2020a74bc692">write_variable_header</a> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memdesc:a5b48706570f2e1953a2a2020a74bc692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write variable header.  <a href="#a5b48706570f2e1953a2a2020a74bc692">More...</a><br /></td></tr>
 <tr class="separator:a5b48706570f2e1953a2a2020a74bc692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6ad1cdf3c41828a21802e93282388ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6ad1cdf3c41828a21802e93282388ea"></a>
-virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>payload_length</b> (void) const </td></tr>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ad6ad1cdf3c41828a21802e93282388ea">payload_length</a> (void) const </td></tr>
+<tr class="memdesc:ad6ad1cdf3c41828a21802e93282388ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of payload. <br /></td></tr>
 <tr class="separator:ad6ad1cdf3c41828a21802e93282388ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a297603aea3bd4d323ac03d8173e9b27e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a297603aea3bd4d323ac03d8173e9b27e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write_payload</b> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memitem:a297603aea3bd4d323ac03d8173e9b27e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a297603aea3bd4d323ac03d8173e9b27e">write_payload</a> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memdesc:a297603aea3bd4d323ac03d8173e9b27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write payload.  <a href="#a297603aea3bd4d323ac03d8173e9b27e">More...</a><br /></td></tr>
 <tr class="separator:a297603aea3bd4d323ac03d8173e9b27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84978f41ec22ebf8f6785a9a4da1feb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84978f41ec22ebf8f6785a9a4da1feb5"></a>
-virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>response_type</b> (void) const </td></tr>
+virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a84978f41ec22ebf8f6785a9a4da1feb5">response_type</a> (void) const </td></tr>
+<tr class="memdesc:a84978f41ec22ebf8f6785a9a4da1feb5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMQTT_1_1Message.html" title="Abstract base class. ">Message</a> type to expect in response to this message. <br /></td></tr>
 <tr class="separator:a84978f41ec22ebf8f6785a9a4da1feb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -163,12 +181,227 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_flags</b></td></t
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_packet_id</b></td></tr>
 <tr class="separator:a59a9df12d0e24c37e14c8dbbbdd37caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a909c3ea722142a221b5892db44da7d27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a909c3ea722142a221b5892db44da7d27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_deferred_payload</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a909c3ea722142a221b5892db44da7d27">_deferred_payload</a></td></tr>
+<tr class="memdesc:a909c3ea722142a221b5892db44da7d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not all message types use a packet id, but most do. <br /></td></tr>
 <tr class="separator:a909c3ea722142a221b5892db44da7d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6835e4cfcfee666169fb444e238c62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6835e4cfcfee666169fb444e238c62"></a>
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>PubSubClient</b></td></tr>
 <tr class="separator:a4e6835e4cfcfee666169fb444e238c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a66e97a9e8e064f701f9a37061c659422"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t MQTT::Message::fixed_header_length </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>rlength</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Length of the fixed header. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rlength</td><td>Remaining lengh i.e variable header + payload </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a342d47d33f175ccbb2cb9a71e3c563f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MQTT::Message::write_fixed_header </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>bufpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>rlength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the fixed header to a buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to start of buffer (never advances) </td></tr>
+    <tr><td class="paramname">bufpos</td><td>Current position in buffer </td></tr>
+    <tr><td class="paramname">rlength</td><td>Remaining lengh i.e variable header + payload </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e56ed1137be3a186a0ab80a08f7b5d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MQTT::Message::write_packet_id </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>bufpos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the packet id to a buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to start of buffer (never advances) </td></tr>
+    <tr><td class="paramname">bufpos</td><td>Current position in buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a297603aea3bd4d323ac03d8173e9b27e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MQTT::Message::write_payload </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>bufpos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write payload. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to start of buffer (never advances) </td></tr>
+    <tr><td class="paramname">bufpos</td><td>Current position in buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5b48706570f2e1953a2a2020a74bc692"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MQTT::Message::write_variable_header </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>bufpos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write variable header. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to start of buffer (never advances) </td></tr>
+    <tr><td class="paramname">bufpos</td><td>Current position in buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="MQTT_8h_source.html">MQTT.h</a></li>
 <li>MQTT.cpp</li>
@@ -176,7 +409,7 @@ friend&#160;</td><td class="memItemRight" valign="bottom"><b>PubSubClient</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 22 2015 23:20:58 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 22 2015 23:42:56 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

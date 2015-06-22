@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -83,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>MQTT</b></li><li class="navelem"><a class="el" href="classMQTT_1_1Publish.html">Publish</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMQTT.html">MQTT</a></li><li class="navelem"><a class="el" href="classMQTT_1_1Publish.html">Publish</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,6 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MQTT::Publish Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classMQTT_1_1Publish.html" title="Publish a payload to a topic. ">Publish</a> a payload to a topic.  
+ <a href="classMQTT_1_1Publish.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="MQTT_8h_source.html">MQTT.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for MQTT::Publish:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -102,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMQTT_1_1Publish__inherit__graph.png" border="0" usemap="#MQTT_1_1Publish_inherit__map" alt="Inheritance graph"/></div>
 <map name="MQTT_1_1Publish_inherit__map" id="MQTT_1_1Publish_inherit__map">
-<area shape="rect" id="node2" href="classMQTT_1_1Message.html" title="MQTT::Message" alt="" coords="5,5,125,32"/></map>
+<area shape="rect" id="node2" href="classMQTT_1_1Message.html" title="Abstract base class. " alt="" coords="5,5,125,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for MQTT::Publish:</div>
@@ -111,96 +117,123 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classMQTT_1_1Publish__coll__graph.png" border="0" usemap="#MQTT_1_1Publish_coll__map" alt="Collaboration graph"/></div>
 <map name="MQTT_1_1Publish_coll__map" id="MQTT_1_1Publish_coll__map">
-<area shape="rect" id="node2" href="classMQTT_1_1Message.html" title="MQTT::Message" alt="" coords="5,5,125,32"/></map>
+<area shape="rect" id="node2" href="classMQTT_1_1Message.html" title="Abstract base class. " alt="" coords="5,5,125,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a727de7dcb1ba83220f1cd31b0219617d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a727de7dcb1ba83220f1cd31b0219617d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Publish</b> (String topic, String payload)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a727de7dcb1ba83220f1cd31b0219617d">Publish</a> (String <a class="el" href="classMQTT_1_1Publish.html#afc061d9d181014b6c86dc51b37bca51d">topic</a>, String <a class="el" href="classMQTT_1_1Publish.html#ac3b9c09872904024d694f857d064d790">payload</a>)</td></tr>
+<tr class="memdesc:a727de7dcb1ba83220f1cd31b0219617d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructors from string payload. <br /></td></tr>
 <tr class="separator:a727de7dcb1ba83220f1cd31b0219617d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688df93cd9fbf9d0a417fd73145d49e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a688df93cd9fbf9d0a417fd73145d49e0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Publish</b> (String topic, uint8_t *payload, uint32_t length)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a688df93cd9fbf9d0a417fd73145d49e0">Publish</a> (String <a class="el" href="classMQTT_1_1Publish.html#afc061d9d181014b6c86dc51b37bca51d">topic</a>, uint8_t *<a class="el" href="classMQTT_1_1Publish.html#ac3b9c09872904024d694f857d064d790">payload</a>, uint32_t length)</td></tr>
+<tr class="memdesc:a688df93cd9fbf9d0a417fd73145d49e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructors from arbitrary payload. <br /></td></tr>
 <tr class="separator:a688df93cd9fbf9d0a417fd73145d49e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b1d896cb21041f3a97401db9477b51b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b1d896cb21041f3a97401db9477b51b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Publish</b> (String topic, const __FlashStringHelper *payload)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a1b1d896cb21041f3a97401db9477b51b">Publish</a> (String <a class="el" href="classMQTT_1_1Publish.html#afc061d9d181014b6c86dc51b37bca51d">topic</a>, const __FlashStringHelper *<a class="el" href="classMQTT_1_1Publish.html#ac3b9c09872904024d694f857d064d790">payload</a>)</td></tr>
+<tr class="memdesc:a1b1d896cb21041f3a97401db9477b51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a string stored in flash using the F() macro. <br /></td></tr>
 <tr class="separator:a1b1d896cb21041f3a97401db9477b51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9999b08f8b9360fcf073aca194ab914"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9999b08f8b9360fcf073aca194ab914"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Publish</b> (uint8_t flags, uint8_t *data, uint32_t length)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#ac9999b08f8b9360fcf073aca194ab914">Publish</a> (uint8_t flags, uint8_t *data, uint32_t length)</td></tr>
+<tr class="memdesc:ac9999b08f8b9360fcf073aca194ab914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a network buffer. <br /></td></tr>
 <tr class="separator:ac9999b08f8b9360fcf073aca194ab914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97085e793da888f02abe4fbd4515f037"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97085e793da888f02abe4fbd4515f037"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>retain</b> (void) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a97085e793da888f02abe4fbd4515f037">retain</a> (void) const </td></tr>
+<tr class="memdesc:a97085e793da888f02abe4fbd4515f037"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get retain flag. <br /></td></tr>
 <tr class="separator:a97085e793da888f02abe4fbd4515f037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f06bef605b2742e330c9939bd6ec2da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f06bef605b2742e330c9939bd6ec2da"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>set_retain</b> (bool r=true)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a6f06bef605b2742e330c9939bd6ec2da">set_retain</a> (bool r=true)</td></tr>
+<tr class="memdesc:a6f06bef605b2742e330c9939bd6ec2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set retain flag. <br /></td></tr>
 <tr class="separator:a6f06bef605b2742e330c9939bd6ec2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c3388a73f9ac1a69d5bdd99bb8cf8da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c3388a73f9ac1a69d5bdd99bb8cf8da"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>unset_retain</b> (void)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a9c3388a73f9ac1a69d5bdd99bb8cf8da">unset_retain</a> (void)</td></tr>
+<tr class="memdesc:a9c3388a73f9ac1a69d5bdd99bb8cf8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unset retain flag. <br /></td></tr>
 <tr class="separator:a9c3388a73f9ac1a69d5bdd99bb8cf8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0848e8fc25a9b4940373a777ba263080"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0848e8fc25a9b4940373a777ba263080"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>qos</b> (void) const </td></tr>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a0848e8fc25a9b4940373a777ba263080">qos</a> (void) const </td></tr>
+<tr class="memdesc:a0848e8fc25a9b4940373a777ba263080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get QoS value. <br /></td></tr>
 <tr class="separator:a0848e8fc25a9b4940373a777ba263080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33f65a06134f0c31a5c36341fdcd5d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad33f65a06134f0c31a5c36341fdcd5d2"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>set_qos</b> (uint8_t q, uint16_t pid=0)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#ad33f65a06134f0c31a5c36341fdcd5d2">set_qos</a> (uint8_t q, uint16_t pid=0)</td></tr>
+<tr class="memdesc:ad33f65a06134f0c31a5c36341fdcd5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set QoS value. <br /></td></tr>
 <tr class="separator:ad33f65a06134f0c31a5c36341fdcd5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9976a05441e68f79283328927ca4a447"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9976a05441e68f79283328927ca4a447"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>unset_qos</b> (void)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a9976a05441e68f79283328927ca4a447">unset_qos</a> (void)</td></tr>
+<tr class="memdesc:a9976a05441e68f79283328927ca4a447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unset QoS value. <br /></td></tr>
 <tr class="separator:a9976a05441e68f79283328927ca4a447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac71f8ce1198f148af47ad75d8e6803e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac71f8ce1198f148af47ad75d8e6803e6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>dup</b> (void) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#ac71f8ce1198f148af47ad75d8e6803e6">dup</a> (void) const </td></tr>
+<tr class="memdesc:ac71f8ce1198f148af47ad75d8e6803e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dup flag. <br /></td></tr>
 <tr class="separator:ac71f8ce1198f148af47ad75d8e6803e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4a74ac8f468c8e36049f0658356f39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec4a74ac8f468c8e36049f0658356f39"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>set_dup</b> (bool d=true)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#aec4a74ac8f468c8e36049f0658356f39">set_dup</a> (bool d=true)</td></tr>
+<tr class="memdesc:aec4a74ac8f468c8e36049f0658356f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dup flag. <br /></td></tr>
 <tr class="separator:aec4a74ac8f468c8e36049f0658356f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aec8b990bd8c9425e66aa2507a158b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aec8b990bd8c9425e66aa2507a158b1"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>unset_dup</b> (void)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a7aec8b990bd8c9425e66aa2507a158b1">unset_dup</a> (void)</td></tr>
+<tr class="memdesc:a7aec8b990bd8c9425e66aa2507a158b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unset dup flag. <br /></td></tr>
 <tr class="separator:a7aec8b990bd8c9425e66aa2507a158b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc061d9d181014b6c86dc51b37bca51d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc061d9d181014b6c86dc51b37bca51d"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>topic</b> (void) const </td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#afc061d9d181014b6c86dc51b37bca51d">topic</a> (void) const </td></tr>
+<tr class="memdesc:afc061d9d181014b6c86dc51b37bca51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the topic string. <br /></td></tr>
 <tr class="separator:afc061d9d181014b6c86dc51b37bca51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a089c0e99ee8943ff3068dccb66d399be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a089c0e99ee8943ff3068dccb66d399be"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>payload_string</b> (void) const </td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a089c0e99ee8943ff3068dccb66d399be">payload_string</a> (void) const </td></tr>
+<tr class="memdesc:a089c0e99ee8943ff3068dccb66d399be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the payload as a string. <br /></td></tr>
 <tr class="separator:a089c0e99ee8943ff3068dccb66d399be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3b9c09872904024d694f857d064d790"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3b9c09872904024d694f857d064d790"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>payload</b> (void) const </td></tr>
+uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#ac3b9c09872904024d694f857d064d790">payload</a> (void) const </td></tr>
+<tr class="memdesc:ac3b9c09872904024d694f857d064d790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the payload pointer. <br /></td></tr>
 <tr class="separator:ac3b9c09872904024d694f857d064d790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ccf84a68225f2c7374ac843c80a7e9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ccf84a68225f2c7374ac843c80a7e9e"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>payload_len</b> (void) const </td></tr>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a5ccf84a68225f2c7374ac843c80a7e9e">payload_len</a> (void) const </td></tr>
+<tr class="memdesc:a5ccf84a68225f2c7374ac843c80a7e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the payload length. <br /></td></tr>
 <tr class="separator:a5ccf84a68225f2c7374ac843c80a7e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMQTT_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMQTT_1_1Message')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMQTT_1_1Message.html">MQTT::Message</a></td></tr>
 <tr class="memitem:a14eb7500e2dba2fd8e50b3cc446a67db inherit pub_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14eb7500e2dba2fd8e50b3cc446a67db"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>send</b> (WiFiClient &amp;wclient)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a14eb7500e2dba2fd8e50b3cc446a67db">send</a> (WiFiClient &amp;wclient)</td></tr>
+<tr class="memdesc:a14eb7500e2dba2fd8e50b3cc446a67db inherit pub_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the message out. <br /></td></tr>
 <tr class="separator:a14eb7500e2dba2fd8e50b3cc446a67db inherit pub_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fc22d8c243b42f62e28f206674e8bc inherit pub_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04fc22d8c243b42f62e28f206674e8bc"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> (void) const </td></tr>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a04fc22d8c243b42f62e28f206674e8bc">type</a> (void) const </td></tr>
+<tr class="memdesc:a04fc22d8c243b42f62e28f206674e8bc inherit pub_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the message type. <br /></td></tr>
 <tr class="separator:a04fc22d8c243b42f62e28f206674e8bc inherit pub_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cfae4e8890e7ea505c652d7d3887de7 inherit pub_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cfae4e8890e7ea505c652d7d3887de7"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>packet_id</b> (void) const </td></tr>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a2cfae4e8890e7ea505c652d7d3887de7">packet_id</a> (void) const </td></tr>
+<tr class="memdesc:a2cfae4e8890e7ea505c652d7d3887de7 inherit pub_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the packet id. <br /></td></tr>
 <tr class="separator:a2cfae4e8890e7ea505c652d7d3887de7 inherit pub_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a9a5366d567d252b07fb153aabc16e076"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a5366d567d252b07fb153aabc16e076"></a>
-<a class="el" href="classMQTT_1_1Publish.html">Publish</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Publish_P</b> (String topic, PGM_P payload, uint32_t length)</td></tr>
+<a class="el" href="classMQTT_1_1Publish.html">Publish</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Publish.html#a9a5366d567d252b07fb153aabc16e076">Publish_P</a> (String <a class="el" href="classMQTT_1_1Publish.html#afc061d9d181014b6c86dc51b37bca51d">topic</a>, PGM_P <a class="el" href="classMQTT_1_1Publish.html#ac3b9c09872904024d694f857d064d790">payload</a>, uint32_t length)</td></tr>
+<tr class="memdesc:a9a5366d567d252b07fb153aabc16e076"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function made to look like a constructor, reading the payload from flash. <br /></td></tr>
 <tr class="separator:a9a5366d567d252b07fb153aabc16e076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classMQTT_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMQTT_1_1Message')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classMQTT_1_1Message.html">MQTT::Message</a></td></tr>
 <tr class="memitem:a9858fc94f0acfd013e1aa913bc910a4f inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9858fc94f0acfd013e1aa913bc910a4f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> (uint8_t t, uint8_t f=0)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a9858fc94f0acfd013e1aa913bc910a4f">Message</a> (uint8_t t, uint8_t f=0)</td></tr>
+<tr class="memdesc:a9858fc94f0acfd013e1aa913bc910a4f inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and flags. <br /></td></tr>
 <tr class="separator:a9858fc94f0acfd013e1aa913bc910a4f inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75e91efef8bd4546124d039076a5377 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae75e91efef8bd4546124d039076a5377"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> (uint8_t t, uint16_t pid)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ae75e91efef8bd4546124d039076a5377">Message</a> (uint8_t t, uint16_t pid)</td></tr>
+<tr class="memdesc:ae75e91efef8bd4546124d039076a5377 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and packet id. <br /></td></tr>
 <tr class="separator:ae75e91efef8bd4546124d039076a5377 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e97a9e8e064f701f9a37061c659422 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66e97a9e8e064f701f9a37061c659422"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>fixed_header_length</b> (uint32_t rlength) const </td></tr>
+<tr class="memitem:ae66138eb7e09ec5dfd2ee47261b32f61 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae66138eb7e09ec5dfd2ee47261b32f61"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ae66138eb7e09ec5dfd2ee47261b32f61">~Message</a> ()</td></tr>
+<tr class="memdesc:ae66138eb7e09ec5dfd2ee47261b32f61 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:ae66138eb7e09ec5dfd2ee47261b32f61 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e97a9e8e064f701f9a37061c659422 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a66e97a9e8e064f701f9a37061c659422">fixed_header_length</a> (uint32_t rlength) const </td></tr>
+<tr class="memdesc:a66e97a9e8e064f701f9a37061c659422 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the fixed header.  <a href="#a66e97a9e8e064f701f9a37061c659422">More...</a><br /></td></tr>
 <tr class="separator:a66e97a9e8e064f701f9a37061c659422 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a342d47d33f175ccbb2cb9a71e3c563f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_fixed_header</b> (uint8_t *buf, uint32_t &amp;bufpos, uint32_t rlength) const </td></tr>
+<tr class="memitem:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a342d47d33f175ccbb2cb9a71e3c563f3">write_fixed_header</a> (uint8_t *buf, uint32_t &amp;bufpos, uint32_t rlength) const </td></tr>
+<tr class="memdesc:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the fixed header to a buffer.  <a href="#a342d47d33f175ccbb2cb9a71e3c563f3">More...</a><br /></td></tr>
 <tr class="separator:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e56ed1137be3a186a0ab80a08f7b5d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write_packet_id</b> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memitem:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a5e56ed1137be3a186a0ab80a08f7b5d5">write_packet_id</a> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
+<tr class="memdesc:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the packet id to a buffer.  <a href="#a5e56ed1137be3a186a0ab80a08f7b5d5">More...</a><br /></td></tr>
 <tr class="separator:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classMQTT_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classMQTT_1_1Message')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classMQTT_1_1Message.html">MQTT::Message</a></td></tr>
 <tr class="memitem:afaa816e5f4aa78c6d24b6e0022d43686 inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaa816e5f4aa78c6d24b6e0022d43686"></a>
@@ -213,20 +246,23 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_flags</b></td></t
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_packet_id</b></td></tr>
 <tr class="separator:a59a9df12d0e24c37e14c8dbbbdd37caa inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a909c3ea722142a221b5892db44da7d27 inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a909c3ea722142a221b5892db44da7d27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_deferred_payload</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a909c3ea722142a221b5892db44da7d27">_deferred_payload</a></td></tr>
+<tr class="memdesc:a909c3ea722142a221b5892db44da7d27 inherit pro_attribs_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not all message types use a packet id, but most do. <br /></td></tr>
 <tr class="separator:a909c3ea722142a221b5892db44da7d27 inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6835e4cfcfee666169fb444e238c62 inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6835e4cfcfee666169fb444e238c62"></a>
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>PubSubClient</b></td></tr>
 <tr class="separator:a4e6835e4cfcfee666169fb444e238c62 inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classMQTT_1_1Publish.html" title="Publish a payload to a topic. ">Publish</a> a payload to a topic. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="MQTT_8h_source.html">MQTT.h</a></li>
 <li>MQTT.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 22 2015 23:20:58 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 22 2015 23:42:56 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

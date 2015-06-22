@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['callback',['callback',['../classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab',1,'PubSubClient']]],
-  ['connect',['connect',['../classPubSubClient.html#a31c1732dd6384ab67124754581b96384',1,'PubSubClient::connect(String id)'],['../classPubSubClient.html#a868286245936f887239a59599ecc9c90',1,'PubSubClient::connect(String id, String willTopic, uint8_t willQos, bool willRetain, String willMessage)'],['../classPubSubClient.html#a1ee587539281d2b82b6efa85557a3abc',1,'PubSubClient::connect(MQTT::Connect &amp;conn)']]],
-  ['connected',['connected',['../classPubSubClient.html#a7f2097ea474209f9454dbdcb671fa2e9',1,'PubSubClient']]]
+  ['add_5ftopic',['add_topic',['../classMQTT_1_1Subscribe.html#ab20b6a3953c1db4ecab97a69737c4e9d',1,'MQTT::Subscribe::add_topic()'],['../classMQTT_1_1Unsubscribe.html#ae3e8dfe3cce22e21fc066d7be16fa376',1,'MQTT::Unsubscribe::add_topic()']]]
 ];

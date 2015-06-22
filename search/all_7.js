@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['unset_5fcallback',['unset_callback',['../classPubSubClient.html#a5c8934e727da1829348beb20802f1279',1,'PubSubClient']]],
-  ['unsubscribe',['unsubscribe',['../classPubSubClient.html#a99633eb1d6cd90111de075fd4ee92016',1,'PubSubClient::unsubscribe(String topic)'],['../classPubSubClient.html#a7fa3c101c2187e07a2c05fc56d9c2f1e',1,'PubSubClient::unsubscribe(MQTT::Unsubscribe &amp;unsub)']]],
-  ['unsubscribe',['Unsubscribe',['../classMQTT_1_1Unsubscribe.html',1,'MQTT']]],
-  ['unsubscribeack',['UnsubscribeAck',['../classMQTT_1_1UnsubscribeAck.html',1,'MQTT']]]
+  ['message',['Message',['../classMQTT_1_1Message.html',1,'MQTT']]],
+  ['message',['Message',['../classMQTT_1_1Message.html#a9858fc94f0acfd013e1aa913bc910a4f',1,'MQTT::Message::Message(uint8_t t, uint8_t f=0)'],['../classMQTT_1_1Message.html#ae75e91efef8bd4546124d039076a5377',1,'MQTT::Message::Message(uint8_t t, uint16_t pid)']]],
+  ['mqtt',['MQTT',['../namespaceMQTT.html',1,'']]]
 ];
