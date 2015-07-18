@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['disconnect',['Disconnect',['../classMQTT_1_1Disconnect.html',1,'MQTT']]],
-  ['disconnect',['Disconnect',['../classMQTT_1_1Disconnect.html#aef965135e4b17db9210615d7183163fb',1,'MQTT::Disconnect::Disconnect()'],['../classPubSubClient.html#acb3d3c0bd6e5257a343c0049d25c20a9',1,'PubSubClient::disconnect()']]],
-  ['dup',['dup',['../classMQTT_1_1Publish.html#ac71f8ce1198f148af47ad75d8e6803e6',1,'MQTT::Publish']]]
+  ['callback',['callback',['../classPubSubClient.html#ae8e9074233412afd624b43edf5ab4dab',1,'PubSubClient']]],
+  ['connect',['Connect',['../classMQTT_1_1Connect.html#ad1020e961de600f85cf8c3c0730072b4',1,'MQTT::Connect::Connect()'],['../classPubSubClient.html#a31c1732dd6384ab67124754581b96384',1,'PubSubClient::connect(String id)'],['../classPubSubClient.html#a868286245936f887239a59599ecc9c90',1,'PubSubClient::connect(String id, String willTopic, uint8_t willQos, bool willRetain, String willMessage)'],['../classPubSubClient.html#a1ee587539281d2b82b6efa85557a3abc',1,'PubSubClient::connect(MQTT::Connect &amp;conn)']]],
+  ['connect',['Connect',['../classMQTT_1_1Connect.html',1,'MQTT']]],
+  ['connectack',['ConnectAck',['../classMQTT_1_1ConnectAck.html',1,'MQTT']]],
+  ['connected',['connected',['../classPubSubClient.html#a7f2097ea474209f9454dbdcb671fa2e9',1,'PubSubClient']]]
 ];

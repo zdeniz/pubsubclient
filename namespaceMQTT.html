@@ -84,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -142,6 +143,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response to <a class="el" href="classMQTT_1_1Unsubscribe.html" title="Unsubscribe from one or more topics. ">Unsubscribe</a>.  <a href="classMQTT_1_1UnsubscribeAck.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a2a1cf7084e6a882985001907ece9d42b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a1cf7084e6a882985001907ece9d42b"></a>
+typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>payload_callback_t</b>) (Client &amp;)</td></tr>
+<tr class="separator:a2a1cf7084e6a882985001907ece9d42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a8423c840a01a4aa32702d34f8525246a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8423c840a01a4aa32702d34f8525246a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>message_type</b> { <br />
@@ -181,7 +188,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (uint8_t *b
 <tr class="separator:a096a5faaea5e8775d7f412fa79f81e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a446764c35d6cbee067e989bc9c9af5d6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a446764c35d6cbee067e989bc9c9af5d6"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a446764c35d6cbee067e989bc9c9af5d6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read</b> (uint8_t *buf, uint32_t &amp;pos)</td></tr>
+<tr class="memitem:a446764c35d6cbee067e989bc9c9af5d6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceMQTT.html#a446764c35d6cbee067e989bc9c9af5d6">read</a> (uint8_t *buf, uint32_t &amp;pos)</td></tr>
+<tr class="memdesc:a446764c35d6cbee067e989bc9c9af5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to read from a buffer. <br /></td></tr>
 <tr class="separator:a446764c35d6cbee067e989bc9c9af5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d1fffaa65d1b214e1f9e7958b4a2fb2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1d1fffaa65d1b214e1f9e7958b4a2fb2"></a>
 template&lt;&gt; </td></tr>
@@ -195,9 +203,23 @@ template&lt;&gt; </td></tr>
 template&lt;&gt; </td></tr>
 <tr class="memitem:aadcf0a5f9e1f8881b87aede59d68f77a"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read&lt; String &gt;</b> (uint8_t *buf, uint32_t &amp;pos)</td></tr>
 <tr class="separator:aadcf0a5f9e1f8881b87aede59d68f77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa959a295c1fdb00cb0212e6c18e37c81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa959a295c1fdb00cb0212e6c18e37c81"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>readByte</b> (Client &amp;client)</td></tr>
-<tr class="separator:aa959a295c1fdb00cb0212e6c18e37c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ea000e63824ff3e15b82d47c9e9738"><td class="memTemplParams" colspan="2"><a class="anchor" id="a12ea000e63824ff3e15b82d47c9e9738"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a12ea000e63824ff3e15b82d47c9e9738"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceMQTT.html#a12ea000e63824ff3e15b82d47c9e9738">read</a> (Client &amp;client)</td></tr>
+<tr class="memdesc:a12ea000e63824ff3e15b82d47c9e9738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template function to read from a Client object. <br /></td></tr>
+<tr class="separator:a12ea000e63824ff3e15b82d47c9e9738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05dc5a00a91a030830c5ceba5e285e69"><td class="memTemplParams" colspan="2"><a class="anchor" id="a05dc5a00a91a030830c5ceba5e285e69"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a05dc5a00a91a030830c5ceba5e285e69"><td class="memTemplItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read&lt; uint8_t &gt;</b> (Client &amp;client)</td></tr>
+<tr class="separator:a05dc5a00a91a030830c5ceba5e285e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1db1ffa2d7f2c5bbfecc972ab89b76"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5b1db1ffa2d7f2c5bbfecc972ab89b76"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a5b1db1ffa2d7f2c5bbfecc972ab89b76"><td class="memTemplItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read&lt; uint16_t &gt;</b> (Client &amp;client)</td></tr>
+<tr class="separator:a5b1db1ffa2d7f2c5bbfecc972ab89b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b55b522b06de42c49ede98dab327e93"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9b55b522b06de42c49ede98dab327e93"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a9b55b522b06de42c49ede98dab327e93"><td class="memTemplItemLeft" align="right" valign="top">String&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read&lt; String &gt;</b> (Client &amp;client)</td></tr>
+<tr class="separator:a9b55b522b06de42c49ede98dab327e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a622020fe9a797e01e3f3c420c9834b64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMQTT_1_1Message.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMQTT.html#a622020fe9a797e01e3f3c420c9834b64">readPacket</a> (Client &amp;client)</td></tr>
 <tr class="memdesc:a622020fe9a797e01e3f3c420c9834b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser.  <a href="#a622020fe9a797e01e3f3c420c9834b64">More...</a><br /></td></tr>
 <tr class="separator:a622020fe9a797e01e3f3c420c9834b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,7 +253,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>readByte</b> (Clie
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 06:13:40 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 18 2015 20:49:53 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

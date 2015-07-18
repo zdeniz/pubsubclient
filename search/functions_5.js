@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loop',['loop',['../classPubSubClient.html#a08f4240c1f1fc10b9c6f5f063b13d240',1,'PubSubClient']]]
+  ['keepalive',['keepalive',['../classMQTT_1_1Connect.html#af0bfe527749afabdc093ed08c73d823b',1,'MQTT::Connect']]]
 ];

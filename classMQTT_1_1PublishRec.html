@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classMQTT_1_1PublishRec-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MQTT::PublishRec Class Reference</div>  </div>
@@ -123,12 +124,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab91ea636326befccaa5cfdbeabbba97c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab91ea636326befccaa5cfdbeabbba97c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1PublishRec.html#ab91ea636326befccaa5cfdbeabbba97c">PublishRec</a> (uint16_t pid)</td></tr>
-<tr class="memdesc:ab91ea636326befccaa5cfdbeabbba97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct with a packet id. <br /></td></tr>
+<tr class="memdesc:ab91ea636326befccaa5cfdbeabbba97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a packet id. <br /></td></tr>
 <tr class="separator:ab91ea636326befccaa5cfdbeabbba97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87fb5aee6295db16988eb09928f392d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87fb5aee6295db16988eb09928f392d1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1PublishRec.html#a87fb5aee6295db16988eb09928f392d1">PublishRec</a> (uint8_t *data, uint32_t length)</td></tr>
-<tr class="memdesc:a87fb5aee6295db16988eb09928f392d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a network buffer. <br /></td></tr>
-<tr class="separator:a87fb5aee6295db16988eb09928f392d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classMQTT_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMQTT_1_1Message')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMQTT_1_1Message.html">MQTT::Message</a></td></tr>
 <tr class="memitem:a5cbdfb497899e6d94433e7adfa08876f inherit pub_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cbdfb497899e6d94433e7adfa08876f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a5cbdfb497899e6d94433e7adfa08876f">send</a> (Client &amp;client)</td></tr>
@@ -138,21 +135,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 message_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a8d9069807a7f8c0ea2f9fa38402e13e2">type</a> (void) const </td></tr>
 <tr class="memdesc:a8d9069807a7f8c0ea2f9fa38402e13e2 inherit pub_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the message type. <br /></td></tr>
 <tr class="separator:a8d9069807a7f8c0ea2f9fa38402e13e2 inherit pub_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cfae4e8890e7ea505c652d7d3887de7 inherit pub_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cfae4e8890e7ea505c652d7d3887de7"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a2cfae4e8890e7ea505c652d7d3887de7">packet_id</a> (void) const </td></tr>
-<tr class="memdesc:a2cfae4e8890e7ea505c652d7d3887de7 inherit pub_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the packet id. <br /></td></tr>
-<tr class="separator:a2cfae4e8890e7ea505c652d7d3887de7 inherit pub_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37fb9cc34cc32508090952fa551ae55 inherit pub_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac37fb9cc34cc32508090952fa551ae55"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ac37fb9cc34cc32508090952fa551ae55">has_stream</a> (void) const </td></tr>
+<tr class="memdesc:ac37fb9cc34cc32508090952fa551ae55 inherit pub_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this message have a network stream for reading the (large) payload? <br /></td></tr>
+<tr class="separator:ac37fb9cc34cc32508090952fa551ae55 inherit pub_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ae7c0d4e04a9606b9c56dcdba3d9f64ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMQTT_1_1Message.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1PublishRec.html#ae7c0d4e04a9606b9c56dcdba3d9f64ca">readPacket</a> (Client &amp;client)</td></tr>
+<tr class="memdesc:ae7c0d4e04a9606b9c56dcdba3d9f64ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser.  <a href="#ae7c0d4e04a9606b9c56dcdba3d9f64ca">More...</a><br /></td></tr>
+<tr class="separator:ae7c0d4e04a9606b9c56dcdba3d9f64ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classMQTT_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classMQTT_1_1Message')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classMQTT_1_1Message.html">MQTT::Message</a></td></tr>
-<tr class="memitem:a481e724da9dfb0b16b140c410f1147af inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a481e724da9dfb0b16b140c410f1147af">Message</a> (message_type t, uint8_t f=0)</td></tr>
-<tr class="memdesc:a481e724da9dfb0b16b140c410f1147af inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not all message types use a packet id, but most do.  <a href="#a481e724da9dfb0b16b140c410f1147af">More...</a><br /></td></tr>
+<tr class="memitem:a481e724da9dfb0b16b140c410f1147af inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a481e724da9dfb0b16b140c410f1147af"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a481e724da9dfb0b16b140c410f1147af">Message</a> (message_type t, uint8_t f=0)</td></tr>
+<tr class="memdesc:a481e724da9dfb0b16b140c410f1147af inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and flags. <br /></td></tr>
 <tr class="separator:a481e724da9dfb0b16b140c410f1147af inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b7cb548cbb70939ceea2da40393f85 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7b7cb548cbb70939ceea2da40393f85"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#af7b7cb548cbb70939ceea2da40393f85">Message</a> (message_type t, uint16_t pid)</td></tr>
-<tr class="memdesc:af7b7cb548cbb70939ceea2da40393f85 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor from type and packet id. <br /></td></tr>
-<tr class="separator:af7b7cb548cbb70939ceea2da40393f85 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66138eb7e09ec5dfd2ee47261b32f61 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae66138eb7e09ec5dfd2ee47261b32f61"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#ae66138eb7e09ec5dfd2ee47261b32f61">~Message</a> ()</td></tr>
 <tr class="memdesc:ae66138eb7e09ec5dfd2ee47261b32f61 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
@@ -163,6 +163,18 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a342d47d33f175ccbb2cb9a71e3c563f3">write_fixed_header</a> (uint8_t *buf, uint32_t &amp;bufpos, uint32_t rlength) const </td></tr>
 <tr class="memdesc:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the fixed header to a buffer.  <a href="#a342d47d33f175ccbb2cb9a71e3c563f3">More...</a><br /></td></tr>
 <tr class="separator:a342d47d33f175ccbb2cb9a71e3c563f3 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a30c70c0c51a560d24f89e34aec7478 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a30c70c0c51a560d24f89e34aec7478"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a8a30c70c0c51a560d24f89e34aec7478">need_packet_id</a> (void) const </td></tr>
+<tr class="memdesc:a8a30c70c0c51a560d24f89e34aec7478 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this message need a packet id before being sent? <br /></td></tr>
+<tr class="separator:a8a30c70c0c51a560d24f89e34aec7478 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcb097d98dd60a1600b8e5b54c3fe82 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affcb097d98dd60a1600b8e5b54c3fe82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#affcb097d98dd60a1600b8e5b54c3fe82">set_packet_id</a> (uint16_t pid)</td></tr>
+<tr class="memdesc:affcb097d98dd60a1600b8e5b54c3fe82 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the packet id. <br /></td></tr>
+<tr class="separator:affcb097d98dd60a1600b8e5b54c3fe82 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfae4e8890e7ea505c652d7d3887de7 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cfae4e8890e7ea505c652d7d3887de7"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a2cfae4e8890e7ea505c652d7d3887de7">packet_id</a> (void) const </td></tr>
+<tr class="memdesc:a2cfae4e8890e7ea505c652d7d3887de7 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the packet id. <br /></td></tr>
+<tr class="separator:a2cfae4e8890e7ea505c652d7d3887de7 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#a5e56ed1137be3a186a0ab80a08f7b5d5">write_packet_id</a> (uint8_t *buf, uint32_t &amp;bufpos) const </td></tr>
 <tr class="memdesc:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the packet id to a buffer.  <a href="#a5e56ed1137be3a186a0ab80a08f7b5d5">More...</a><br /></td></tr>
 <tr class="separator:a5e56ed1137be3a186a0ab80a08f7b5d5 inherit pro_methods_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,20 +195,58 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>_flags</b></td></t
 <tr class="memitem:a59a9df12d0e24c37e14c8dbbbdd37caa inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59a9df12d0e24c37e14c8dbbbdd37caa"></a>
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>_packet_id</b></td></tr>
 <tr class="separator:a59a9df12d0e24c37e14c8dbbbdd37caa inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c1ab018c70675aed865d47bd7b96cd inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7c1ab018c70675aed865d47bd7b96cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMQTT_1_1Message.html#af7c1ab018c70675aed865d47bd7b96cd">_need_packet_id</a></td></tr>
+<tr class="memdesc:af7c1ab018c70675aed865d47bd7b96cd inherit pro_attribs_classMQTT_1_1Message"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not all message types use a packet id, but most do. <br /></td></tr>
+<tr class="separator:af7c1ab018c70675aed865d47bd7b96cd inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba479e8a0546d18e516a1ea2e323bb28 inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba479e8a0546d18e516a1ea2e323bb28"></a>
+Client *&#160;</td><td class="memItemRight" valign="bottom"><b>_stream_client</b></td></tr>
+<tr class="separator:aba479e8a0546d18e516a1ea2e323bb28 inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36b79cfb147a03d8cfd5b64cb83565d inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa36b79cfb147a03d8cfd5b64cb83565d"></a>
+payload_callback_t&#160;</td><td class="memItemRight" valign="bottom"><b>_payload_callback</b></td></tr>
+<tr class="separator:aa36b79cfb147a03d8cfd5b64cb83565d inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6835e4cfcfee666169fb444e238c62 inherit pro_attribs_classMQTT_1_1Message"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6835e4cfcfee666169fb444e238c62"></a>
 friend&#160;</td><td class="memItemRight" valign="bottom"><b>PubSubClient</b></td></tr>
 <tr class="separator:a4e6835e4cfcfee666169fb444e238c62 inherit pro_attribs_classMQTT_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>First response to <a class="el" href="classMQTT_1_1Publish.html" title="Publish a payload to a topic. ">Publish</a> when qos == 2. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ae7c0d4e04a9606b9c56dcdba3d9f64ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMQTT_1_1Message.html">Message</a>* readPacket </td>
+          <td>(</td>
+          <td class="paramtype">Client &amp;&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parser. </p>
+<p>remember to free the object once you're finished with it </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="MQTT_8h_source.html">MQTT.h</a></li>
 <li>MQTT.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 27 2015 06:13:40 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 18 2015 20:49:53 for PubSubClient by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

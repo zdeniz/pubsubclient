@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['variable_5fheader_5flength',['variable_header_length',['../classMQTT_1_1Message.html#a7b69bdde0f504aab98aabc18c7a03a88',1,'MQTT::Message']]]
+  ['topic',['topic',['../classMQTT_1_1Publish.html#afc061d9d181014b6c86dc51b37bca51d',1,'MQTT::Publish']]],
+  ['type',['type',['../classMQTT_1_1Message.html#a8d9069807a7f8c0ea2f9fa38402e13e2',1,'MQTT::Message']]]
 ];
